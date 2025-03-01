@@ -55,6 +55,7 @@ def increase_score_v2():
             output_file.write(header)
 
             for line in data:
+                global name, score
                 name, score = line.strip().split(',')
 
                 # Convert score data type from string to int
@@ -74,4 +75,9 @@ def increase_score_v2():
     except FileNotFoundError:
         print("Data file not found.")
 
+    # print(output_file)
     return output_file
+   
+
+
+print(increase_score_v2())
